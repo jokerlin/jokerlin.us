@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
 import { englishOnly } from '../utils'
-
-const inactiveStyle = 'opacity-20 hover:opacity-50'
-
-const route = useRoute()
 </script>
 
 <template>

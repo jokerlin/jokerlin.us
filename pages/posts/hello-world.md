@@ -6,4 +6,4 @@ duration: 1min
 description: Hello World!
 ---
 
-My site is developed by Vitesse and deployed by Netlify.
+My site is developed by [Vitesse](https://github.com/antfu/vitesse) and deployed by [Netlify](https://www.netlify.com/).
