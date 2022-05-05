@@ -5,32 +5,17 @@ context('Basic', () => {
 
   it('basic nav', () => {
     cy.url()
-      .should('eq', 'http://localhost:3333/')
+      .should('eq', 'http://localhost:4000/')
 
-    cy.contains('[Home Layout]')
+    cy.contains('Posts')
       .should('exist')
 
-    cy.get('#input')
-      .type('Vitesse{Enter}')
-      .url()
-      .should('eq', 'http://localhost:3333/hi/Vitesse')
-
-    cy.contains('[Default Layout]')
+    cy.contains('About')
       .should('exist')
 
-    cy.get('[btn]')
+    cy.contains('Posts')
       .click()
       .url()
-      .should('eq', 'http://localhost:3333/')
-  })
-
-  it('markdown', () => {
-    cy.get('[title="About"]')
-      .click()
-      .url()
-      .should('eq', 'http://localhost:3333/about')
-
-    cy.get('pre.language-js')
-      .should('exist')
+      .should('eq', 'http://localhost:4000/posts')
   })
 })

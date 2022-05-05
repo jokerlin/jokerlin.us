@@ -4,6 +4,7 @@
 *.local
 dist
 dist-ssr
+cypress
 node_modules
 .idea/
 *.log

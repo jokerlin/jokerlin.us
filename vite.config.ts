@@ -128,8 +128,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
+        name: 'jokerlin.us',
+        short_name: 'jokerlin.us',
         theme_color: '#ffffff',
         icons: [
           {
@@ -160,7 +160,7 @@ export default defineConfig({
     }),
 
     // https://github.com/antfu/vite-plugin-inspect
-    // Visit http://localhost:3333/__inspect/ to see the inspector
+    // Visit http://localhost:4000/__inspect/ to see the inspector
     Inspect(),
   ],
 
