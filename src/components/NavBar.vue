@@ -13,7 +13,7 @@
         </router-link>
         <router-link to="/">
           <span class="lt-md:hidden">About</span>
-          <div i-ri-article-line md:hidden />
+          <div i-simple-icons:aboutdotme md:hidden />
         </router-link>
         <a href="https://twitter.com/jokerlinheng" target="_blank" title="Twitter" class="lt-md:hidden">
           <div i-feather-twitter />
