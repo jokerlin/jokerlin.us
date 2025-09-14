@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="675" fill="none"
+  viewBox="0 0 1200 675">
+  <g clip-path="url(#clip0_402_22)">
+    <rect width="1200" height="675" fill="#000000" />
+    <text fill="#888888" xml:space="preserve" style="white-space:pre" font-family="Inter" font-size="36" letter-spacing="0em">
+      <tspan x="274" y="320">jokerlin</tspan>
+    </text>
+    <text fill="#fff" xml:space="preserve" style="white-space:pre" font-family="Inter" font-size="50" letter-spacing="0em">
+      <tspan x="274" y="382.898">{{line1}}</tspan>
+      <tspan x="274" y="465">{{line2}}</tspan>
+    </text>
+  </g>
+  <defs>
+    <pattern id="pattern0" width="1" height="1" patternContentUnits="objectBoundingBox">
+      <use transform="scale(0.000416667 0.000740741)" xlink:href="#image0_402_22" />
+    </pattern>
+    <clipPath id="clip0_402_22">
+      <rect width="1200" height="675" fill="#fff" />
+    </clipPath>
+  </defs>
+</svg>

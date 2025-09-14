@@ -1,0 +1,16 @@
+/rss https://jokerlin.us/feed.xml 301
+/blog https://jokerlin.us/posts 301
+
+/github https://github.com/jokerlin 301
+/gh https://github.com/jokerlin 301
+/twitter https://twitter.com/jokerlinheng 301
+/sponsor https://github.com/sponsors/jokerlin 301
+/support https://github.com/sponsors/jokerlin 301
+/instagram https://instagram.com/jokerlinheng 301
+/ig https://instagram.com/jokerlinheng 301
+
+/ggpoker_converter	https://github.com/jokerlin/ggpoker_converter	302
+/gg_converter_gui	https://github.com/jokerlin/gg_converter_gui	302
+/instaco	https://github.com/jokerlin/instaco	302
+/nvim	https://github.com/jokerlin/nvim	302
+/toggle-function-keys	https://github.com/jokerlin/toggle-function-keys	302
