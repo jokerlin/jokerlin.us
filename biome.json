@@ -51,7 +51,10 @@
       "!**/temp",
       "!**/public",
       "!**/*.config.js",
-      "!**/*.config.ts"
+      "!**/*.config.ts",
+      "!**/typed-router.d.ts",
+      "!**/auto-imports.d.ts",
+      "!**/components.d.ts"
     ]
   },
   "overrides": [
