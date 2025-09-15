@@ -1,8 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -32,7 +30,7 @@
       "quoteStyle": "single",
       "jsxQuoteStyle": "single",
       "quoteProperties": "asNeeded",
-      "trailingComma": "all",
+      "trailingCommas": "all",
       "semicolons": "asNeeded",
       "arrowParentheses": "asNeeded",
       "bracketSameLine": false,
@@ -41,21 +39,32 @@
     }
   },
   "files": {
-    "include": [
+    "includes": [
       "**/*.js",
       "**/*.ts",
       "**/*.vue",
       "**/*.json",
-      "**/*.md"
-    ],
-    "ignore": [
-      "dist/**",
-      "node_modules/**",
-      ".vitepress/**",
-      "temp/**",
-      "public/**",
-      "*.config.js",
-      "*.config.ts"
+      "**/*.md",
+      "!**/dist",
+      "!**/node_modules",
+      "!**/.vitepress",
+      "!**/temp",
+      "!**/public",
+      "!**/*.config.js",
+      "!**/*.config.ts"
     ]
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.vue"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    }
+  ]
 }

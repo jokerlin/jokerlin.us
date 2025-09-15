@@ -27,8 +27,7 @@ const particlesBlue: Particle[] = []
 const focusTarget = ref<'red' | 'blue' | null>(null)
 
 function pointerIn() {
-  if (focusTarget.value)
-    return
+  if (focusTarget.value) return
   focusTarget.value = Math.random() < 0.5 ? 'red' : 'blue'
 }
 function pointerOut() {
@@ -103,10 +102,8 @@ onMounted(() => {
         particle.vx += (cx - particle.x) * 0.02
         particle.vy += (cy - particle.y) * 0.02
       }
-      if (Math.abs(particle.vx) > 2)
-        particle.vx *= 0.9
-      if (Math.abs(particle.vy) > 2)
-        particle.vy *= 0.9
+      if (Math.abs(particle.vx) > 2) particle.vx *= 0.9
+      if (Math.abs(particle.vy) > 2) particle.vy *= 0.9
 
       particle.x += particle.vx * speed
       particle.y += particle.vy * speed
@@ -145,14 +142,12 @@ onMounted(() => {
       focus(particlesBlue, speed)
       fadeIn(particlesRed, speed)
       fadeOut(particlesBlue, speed)
-    }
-    else if (focusTarget.value === 'blue') {
+    } else if (focusTarget.value === 'blue') {
       focus(particlesBlue, speed)
       focus(particlesRed, speed)
       fadeIn(particlesBlue, speed)
       fadeOut(particlesRed, speed)
-    }
-    else {
+    } else {
       diffuse(particlesRed, speed)
       diffuse(particlesBlue, speed)
       fadeIn(particlesRed, speed)
@@ -161,8 +156,7 @@ onMounted(() => {
     if (focusTarget.value === 'red') {
       renderParticles(particlesBlue)
       renderParticles(particlesRed)
-    }
-    else {
+    } else {
       renderParticles(particlesRed)
       renderParticles(particlesBlue)
     }

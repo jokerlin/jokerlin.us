@@ -8,9 +8,7 @@ const { copy: _copy, copied } = useClipboard()
 const el = ref<HTMLElement | null>(null)
 
 function copy() {
-  _copy(
-    props.text ?? (el.value?.textContent || '').trim().slice(...(props.slice || [0])),
-  )
+  _copy(props.text ?? (el.value?.textContent || '').trim().slice(...(props.slice || [0])))
 }
 </script>
 

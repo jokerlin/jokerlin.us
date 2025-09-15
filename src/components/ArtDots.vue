@@ -15,7 +15,7 @@ const SPACING = 15
 const noise3d = createNoise3D()
 
 const existingPoints = new Set<string>()
-const points: { x: number, y: number, opacity: number, particle: Particle }[] = []
+const points: { x: number; y: number; opacity: number; particle: Particle }[] = []
 
 function getForceOnPoint(x: number, y: number, z: number) {
   return (noise3d(x / SCALE, y / SCALE, z) - 0.5) * 2 * Math.PI
@@ -24,16 +24,21 @@ function getForceOnPoint(x: number, y: number, z: number) {
 const mountedScope = effectScope()
 
 function createDotTexture(app: Application) {
-  const g = new Graphics().circle(0, 0, 1).fill(0xCCCCCC)
+  const g = new Graphics().circle(0, 0, 1).fill(0xcccccc)
   return app.renderer.generateTexture(g)
 }
 
-function addPoints({ dotTexture, particleContainer }: { dotTexture: Texture, particleContainer: ParticleContainer }) {
+function addPoints({
+  dotTexture,
+  particleContainer,
+}: {
+  dotTexture: Texture
+  particleContainer: ParticleContainer
+}) {
   for (let x = -SPACING / 2; x < w + SPACING; x += SPACING) {
     for (let y = -SPACING / 2; y < h + SPACING; y += SPACING) {
       const id = `${x}-${y}`
-      if (existingPoints.has(id))
-        continue
+      if (existingPoints.has(id)) continue
       existingPoints.add(id)
 
       const particle = new Particle(dotTexture)
@@ -48,8 +53,7 @@ function addPoints({ dotTexture, particleContainer }: { dotTexture: Texture, par
 }
 
 async function setup() {
-  if (el.value == null)
-    return
+  if (el.value == null) return
   const app = new Application()
   await app.init({
     background: '#ffffff',
@@ -61,7 +65,9 @@ async function setup() {
   })
   el.value.appendChild(app.canvas)
 
-  const particleContainer = new ParticleContainer({ dynamicProperties: { position: true, alpha: true } })
+  const particleContainer = new ParticleContainer({
+    dynamicProperties: { position: true, alpha: true },
+  })
   app.stage.addChild(particleContainer)
 
   const dotTexture = createDotTexture(app)
@@ -93,8 +99,7 @@ async function setup() {
       // For some reason this throws an error, maybe something wrong with pixi.js
       try {
         app?.destroy(true, { children: true, texture: true, textureSource: true })
-      }
-      catch (error) {
+      } catch (error) {
         console.error(error)
       }
     })

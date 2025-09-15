@@ -10,11 +10,7 @@
       "~/*": ["src/*"]
     },
     "resolveJsonModule": true,
-    "types": [
-      "node",
-      "vite/client",
-      "unplugin-vue-router/client"
-    ],
+    "types": ["node", "vite/client", "unplugin-vue-router/client"],
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

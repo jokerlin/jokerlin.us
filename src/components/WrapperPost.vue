@@ -1,87 +1,85 @@
 <script setup lang="ts">
-import { formatDate } from "~/logics";
+import { formatDate } from '~/logics'
 
 const { frontmatter } = defineProps({
   frontmatter: {
     type: Object,
     required: true,
   },
-});
+})
 
-const router = useRouter();
-const route = useRoute();
-const content = ref<HTMLDivElement>();
+const router = useRouter()
+const route = useRoute()
+const content = ref<HTMLDivElement>()
 
-const base = "https://jokerlin.us";
+const base = 'https://jokerlin.us'
 const tweetUrl = computed(
   () =>
-    `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Reading @jokerlinheng\'s ${base}${route.path}\n\nI think...`)}`,
-);
+    `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Reading @jokerlinheng's ${base}${route.path}\n\nI think...`)}`,
+)
 
 onMounted(() => {
   const navigate = () => {
     if (location.hash) {
-      const el = document.querySelector(decodeURIComponent(location.hash));
+      const el = document.querySelector(decodeURIComponent(location.hash))
       if (el) {
-        const rect = el.getBoundingClientRect();
-        const y = window.scrollY + rect.top - 40;
+        const rect = el.getBoundingClientRect()
+        const y = window.scrollY + rect.top - 40
         window.scrollTo({
           top: y,
-          behavior: "smooth",
-        });
-        return true;
+          behavior: 'smooth',
+        })
+        return true
       }
     }
-  };
+  }
 
   const handleAnchors = (event: MouseEvent & { target: HTMLElement }) => {
-    const link = event.target.closest("a");
+    const link = event.target.closest('a')
 
     if (
       !event.defaultPrevented &&
       link &&
       event.button === 0 &&
-      link.target !== "_blank" &&
-      link.rel !== "external" &&
+      link.target !== '_blank' &&
+      link.rel !== 'external' &&
       !link.download &&
       !event.metaKey &&
       !event.ctrlKey &&
       !event.shiftKey &&
       !event.altKey
     ) {
-      const url = new URL(link.href);
-      if (url.origin !== window.location.origin) return;
+      const url = new URL(link.href)
+      if (url.origin !== window.location.origin) return
 
-      event.preventDefault();
-      const { pathname, hash } = url;
+      event.preventDefault()
+      const { pathname, hash } = url
       if (hash && (!pathname || pathname === location.pathname)) {
-        window.history.replaceState({}, "", hash);
-        navigate();
+        window.history.replaceState({}, '', hash)
+        navigate()
       } else {
-        router.push({ path: pathname, hash });
+        router.push({ path: pathname, hash })
       }
     }
-  };
+  }
 
-  useEventListener(window, "hashchange", navigate);
-  useEventListener(content.value!, "click", handleAnchors, { passive: false });
+  useEventListener(window, 'hashchange', navigate)
+  useEventListener(content.value!, 'click', handleAnchors, { passive: false })
 
   setTimeout(() => {
-    if (!navigate()) setTimeout(navigate, 1000);
-  }, 1);
-});
+    if (!navigate()) setTimeout(navigate, 1000)
+  }, 1)
+})
 
 const ArtComponent = computed(() => {
-  let art = frontmatter.art;
-  if (art === "random") art = Math.random() > 0.5 ? "plum" : "dots";
-  if (typeof window !== "undefined") {
-    if (art === "plum")
-      return defineAsyncComponent(() => import("./ArtPlum.vue"));
-    else if (art === "dots")
-      return defineAsyncComponent(() => import("./ArtDots.vue"));
+  let art = frontmatter.art
+  if (art === 'random') art = Math.random() > 0.5 ? 'plum' : 'dots'
+  if (typeof window !== 'undefined') {
+    if (art === 'plum') return defineAsyncComponent(() => import('./ArtPlum.vue'))
+    else if (art === 'dots') return defineAsyncComponent(() => import('./ArtDots.vue'))
   }
-  return undefined;
-});
+  return undefined
+})
 </script>
 
 <template>

@@ -19,10 +19,8 @@ if (images.length > 0) {
 
   compressImages(images)
 
-  if (!confirm)
-    process.exit(0)
-}
-else {
+  if (!confirm) process.exit(0)
+} else {
   console.log('No images to compress')
   process.exit(0)
 }

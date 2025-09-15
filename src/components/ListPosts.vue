@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { Post } from '~/types'
 import { useRouter } from 'vue-router/auto'
 import { englishOnly, formatDate } from '~/logics'
+import type { Post } from '~/types'
 
 const props = defineProps<{
   type?: string
@@ -10,9 +10,14 @@ const props = defineProps<{
 }>()
 
 const router = useRouter()
-const routes: Post[] = router.getRoutes()
+const routes: Post[] = router
+  .getRoutes()
   .filter(i => i.path.startsWith('/posts') && i.meta.frontmatter.date && !i.meta.frontmatter.draft)
-  .filter(i => !i.path.endsWith('.html') && (i.meta.frontmatter.type || 'blog').split('+').includes(props.type))
+  .filter(
+    i =>
+      !i.path.endsWith('.html') &&
+      (i.meta.frontmatter.type || 'blog').split('+').includes(props.type),
+  )
   .map(i => ({
     path: i.meta.frontmatter.redirect || i.path,
     title: i.meta.frontmatter.title,
@@ -26,21 +31,21 @@ const routes: Post[] = router.getRoutes()
   }))
 
 const posts = computed(() =>
-  [...(props.posts || routes), ...props.extra || []]
+  [...(props.posts || routes), ...(props.extra || [])]
     .sort((a, b) => +new Date(b.date) - +new Date(a.date))
     .filter(i => !englishOnly.value || !i.lang || i.lang === 'en'),
 )
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
 const isFuture = (a?: Date | string | number) => a && new Date(a) > new Date()
-const isSameYear = (a?: Date | string | number, b?: Date | string | number) => a && b && getYear(a) === getYear(b)
+const isSameYear = (a?: Date | string | number, b?: Date | string | number) =>
+  a && b && getYear(a) === getYear(b)
 function isSameGroup(a: Post, b?: Post) {
-  return (isFuture(a.date) === isFuture(b?.date)) && isSameYear(a.date, b?.date)
+  return isFuture(a.date) === isFuture(b?.date) && isSameYear(a.date, b?.date)
 }
 
 function getGroupName(p: Post) {
-  if (isFuture(p.date))
-    return 'Upcoming'
+  if (isFuture(p.date)) return 'Upcoming'
   return getYear(p.date)
 }
 </script>

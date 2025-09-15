@@ -4,8 +4,8 @@ import FloatingVue from 'floating-vue'
 import NProgress from 'nprogress'
 import { createPinia } from 'pinia'
 import { ViteSSG } from 'vite-ssg'
-import { setupRouterScroller } from 'vue-router-better-scroller'
 import { routes } from 'vue-router/auto-routes'
+import { setupRouterScroller } from 'vue-router-better-scroller'
 import App from './App.vue'
 import '@unocss/reset/tailwind.css'
 
@@ -39,10 +39,8 @@ export const createApp = ViteSSG(
           html(ctx) {
             // only do the sliding transition when the scroll position is not 0
             // Disable sliding transition on Dev Mode
-            if (ctx.savedPosition?.top || import.meta.hot)
-              html.classList.add('no-sliding')
-            else
-              html.classList.remove('no-sliding')
+            if (ctx.savedPosition?.top || import.meta.hot) html.classList.add('no-sliding')
+            else html.classList.remove('no-sliding')
             return true
           },
         },

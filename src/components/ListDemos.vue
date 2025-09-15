@@ -5,10 +5,8 @@ import { demoItems } from '../../demo/data'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
 const cols = computed(() => {
-  if (breakpoints.xl.value)
-    return 3
-  if (breakpoints.lg.value)
-    return 2
+  if (breakpoints.xl.value) return 3
+  if (breakpoints.lg.value) return 2
   return 1
 })
 
