@@ -1,12 +1,12 @@
 <script setup lang="ts">
 function toTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  })
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
 }
 
-const { y: scroll } = useWindowScroll()
+const { y: scroll } = useWindowScroll();
 </script>
 
 <template>
@@ -46,19 +46,19 @@ const { y: scroll } = useWindowScroll()
                 </RouterLink>
                 <RouterLink to="/projects" title="Projects">
                     <span class="lt-md:hidden">projects</span>
-                    <div i-ri-lightbulb-line class="md:hidden" />
+                    <div i-ri-code-box-line class="md:hidden" />
                 </RouterLink>
                 <RouterLink to="/library" title="Media">
                     <span class="lt-md:hidden">library</span>
-                    <div i-ri-lightbulb-line class="md:hidden" />
+                    <div i-ri-book-open-line class="md:hidden" />
                 </RouterLink>
                 <RouterLink to="/setup" title="Setup">
                     <span class="lt-md:hidden">setup</span>
-                    <div i-ri-lightbulb-line class="md:hidden" />
+                    <div i-ri-settings-3-line class="md:hidden" />
                 </RouterLink>
                 <RouterLink to="/" title="jokerlin">
                     <span class="lt-md:hidden">me</span>
-                    <div i-ri-lightbulb-line class="md:hidden" />
+                    <div i-ri-user-line class="md:hidden" />
                 </RouterLink>
                 <a
                     href="https://photos.jokerlin.us"
