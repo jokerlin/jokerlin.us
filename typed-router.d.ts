@@ -24,6 +24,7 @@ declare module 'vue-router/auto-routes' {
     '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/thoughts-on-llm': RouteRecordInfo<'/posts/thoughts-on-llm', '/posts/thoughts-on-llm', Record<never, never>, Record<never, never>>,
+    '/posts/weixin-to-readwise-reader': RouteRecordInfo<'/posts/weixin-to-readwise-reader', '/posts/weixin-to-readwise-reader', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
     '/setup': RouteRecordInfo<'/setup', '/setup', Record<never, never>, Record<never, never>>,
   }
@@ -61,6 +62,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/thoughts-on-llm.md': {
       routes: '/posts/thoughts-on-llm'
+      views: never
+    }
+    'pages/posts/weixin-to-readwise-reader.md': {
+      routes: '/posts/weixin-to-readwise-reader'
       views: never
     }
     'pages/projects.md': {
