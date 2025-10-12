@@ -52,7 +52,7 @@ duration: 8min
 
 ### 3. 部署到 Vercel
 
-项目地址：[`jokerlin/Wexin2ReadwiseReader`](https://github.com/jokerlin/Wexin2ReadwiseReader)（把微信消息转发到企业微信客服，通过 webhook 回调把文章添加到 Readwise Reader）。
+项目地址：[`jokerlin/Weixin2ReadwiseReader`](https://github.com/jokerlin/Weixin2ReadwiseReader)（把微信消息转发到企业微信客服，通过 webhook 回调把文章添加到 Readwise Reader）。
 
 **核心流程**：
 
