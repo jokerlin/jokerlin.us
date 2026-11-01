@@ -1,6 +1,6 @@
 import { Buffer } from "node:buffer";
 import { basename, dirname, resolve } from "node:path";
-import MarkdownItShiki from "@shikijs/markdown-it";
+import MarkdownExitShiki from "@shikijs/markdown-exit";
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
@@ -12,7 +12,6 @@ import fs from "fs-extra";
 import matter from "gray-matter";
 import anchor from "markdown-it-anchor";
 import GitHubAlerts from "markdown-it-github-alerts";
-import LinkAttributes from "markdown-it-link-attributes";
 import MarkdownItMagicLink from "markdown-it-magic-link";
 // @ts-expect-error missing types
 import TOC from "markdown-it-table-of-contents";
@@ -22,6 +21,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import IconsResolver from "unplugin-icons/resolver";
 import Icons from "unplugin-icons/vite";
 import Components from "unplugin-vue-components/vite";
+import type { MarkdownExit } from "unplugin-vue-markdown/types";
 import Markdown from "unplugin-vue-markdown/vite";
 import { VueRouterAutoImports } from "vue-router/unplugin";
 import VueRouter from "vue-router/vite";
@@ -81,12 +81,12 @@ export default defineConfig({
       exportFrontmatter: false,
       exposeFrontmatter: false,
       exposeExcerpt: false,
-      markdownItOptions: {
+      markdownOptions: {
         quotes: "\"\"''",
       },
-      async markdownItSetup(md) {
+      markdownSetup(md) {
         md.use(
-          await MarkdownItShiki({
+          MarkdownExitShiki({
             themes: {
               dark: "vitesse-dark",
               light: "vitesse-light",
@@ -113,13 +113,7 @@ export default defineConfig({
           }),
         });
 
-        md.use(LinkAttributes, {
-          matcher: (link: string) => /^https?:\/\//.test(link),
-          attrs: {
-            target: "_blank",
-            rel: "noopener",
-          },
-        });
+        md.use(externalLinks);
 
         md.use(TOC, {
           includeLevel: [1, 2, 3, 4],
@@ -292,4 +286,19 @@ async function generateOg(title: string, output: string) {
   } catch (e) {
     console.error("Failed to generate og image", e);
   }
+}
+
+/** Open external (http/https) markdown links in a new tab. */
+function externalLinks(md: MarkdownExit) {
+  const render =
+    md.renderer.rules.link_open ??
+    ((tokens, idx, options, _env, self) => self.renderToken(tokens, idx, options));
+  md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+    const token = tokens[idx];
+    if (/^https?:\/\//.test(token.attrGet("href") ?? "")) {
+      token.attrSet("target", "_blank");
+      token.attrSet("rel", "noopener");
+    }
+    return render(tokens, idx, options, env, self);
+  };
 }
