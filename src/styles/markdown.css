@@ -31,10 +31,6 @@ html:not(.dark) .shiki span {
   margin: 0;
 }
 
-.twoslash-query-presisted .twoslash-popup-info {
-  transform: translate(0, 1.6em);
-}
-
 /* Prose */
 .prose pre:not(.shiki) {
   padding: 0;
