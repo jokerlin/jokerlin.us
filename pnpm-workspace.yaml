@@ -2,7 +2,7 @@ packages: []
 
 catalogs:
   build:
-    '@shikijs/markdown-it': ^4.5.0
+    '@shikijs/markdown-exit': ^4.5.0
     '@shikijs/transformers': ^4.5.0
     '@shikijs/twoslash': ^4.5.0
     '@unocss/preset-web-fonts': ^66.12.0
@@ -11,7 +11,6 @@ catalogs:
     markdown-it: ^15.0.3
     markdown-it-anchor: ^10.0.0
     markdown-it-github-alerts: ^1.0.1
-    markdown-it-link-attributes: ^4.0.1
     markdown-it-magic-link: ^0.1.4
     markdown-it-table-of-contents: ^1.2.0
     unocss: ^66.12.0
@@ -58,7 +57,6 @@ catalogs:
     '@types/diacritics': ^1.3.3
     '@types/fs-extra': ^11.0.4
     '@types/markdown-it': ^14.2.0
-    '@types/markdown-it-link-attributes': ^3.0.5
     '@types/node': ^26.6.6
     '@types/nprogress': ^0.2.3
     '@types/prompts': ^2.4.9
