@@ -29,13 +29,13 @@ import { defineConfig } from "vite";
 import Inspect from "vite-plugin-inspect";
 import Exclude from "vite-plugin-optimize-exclude";
 import SVG from "vite-svg-loader";
-import { slugify } from "./scripts/slugify";
+import { slugify } from "./scripts/slugify.ts";
 
 const promises: Promise<unknown>[] = [];
 
 export default defineConfig({
   resolve: {
-    alias: [{ find: "~/", replacement: `${resolve(__dirname, "src")}/` }],
+    alias: [{ find: "~/", replacement: `${resolve(import.meta.dirname, "src")}/` }],
   },
   optimizeDeps: {
     include: [
@@ -252,7 +252,7 @@ export default defineConfig({
   ],
 
   build: {
-    rollupOptions: {
+    rolldownOptions: {
       onwarn(warning, next) {
         if (warning.code !== "UNUSED_EXTERNAL_IMPORT") next(warning);
       },
