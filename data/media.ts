@@ -18,20 +18,44 @@ export const anime: MediaRecord[] = [
     creator: '宮崎駿',
   },
   {
-    name: '火垂るの墓 Grave of the Fireflies',
-    creator: '高畑勲',
-  },
-  {
-    name: 'コクリコ坂から From Up on Poppy Hill',
-    creator: '宮崎吾朗',
-  },
-  {
     name: '秒速5センチメートル',
     creator: '新海誠',
   },
   {
-    name: '泣きたい私は猫をかぶる A Whisker Away',
-    creator: '佐藤順一, 柴山智隆',
+    name: '進撃の巨人 Attack on Titan',
+    creator: '諫山創',
+  },
+  {
+    name: 'ヴァイオレット・エヴァーガーデン Violet Evergarden',
+    creator: '暁佳奈',
+  },
+  {
+    name: '文豪ストレイドッグス Bungo Stray Dogs',
+    creator: '朝霧カフカ',
+  },
+  {
+    name: 'かぐや様は告らせたい Kaguya-sama: Love Is War',
+    creator: '赤坂アカ',
+  },
+  {
+    name: 'BEASTARS',
+    creator: '板垣巴留',
+  },
+  {
+    name: 'やがて君になる Bloom Into You',
+    creator: '仲谷鳰',
+  },
+  {
+    name: 'はたらく細胞 Cells at Work!',
+    creator: '清水茜',
+  },
+  {
+    name: 'とある科学の超電磁砲 A Certain Scientific Railgun',
+    creator: '鎌池和馬',
+  },
+  {
+    name: '乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった… My Next Life as a Villainess',
+    creator: '山口悟',
   },
   {
     name: '名探偵コナン Detective Conan',
@@ -131,10 +155,6 @@ export const movie: MediaRecord[] = [
     creator: 'Francis Ford Coppola',
   },
   {
-    name: 'The Irishman',
-    creator: 'Martin Scorsese',
-  },
-  {
     name: '重慶森林',
     creator: '王家衛',
     lang: 'zh-Hant',
@@ -171,18 +191,11 @@ export const movie: MediaRecord[] = [
     name: 'No Time to Die',
     creator: 'Cary Joji Fukunaga',
   },
-  {
-    name: 'Glass Onion',
-    creator: 'Rian Johnson',
-  },
 ]
 
 export const drama: MediaRecord[] = [
   {
     name: 'Breaking Bad',
-  },
-  {
-    name: '더 글로리 The Glory',
   },
   {
     name: '오징어 게임 Squid Game',
@@ -191,15 +204,8 @@ export const drama: MediaRecord[] = [
     name: "솔로지옥 Single's Inferno",
   },
   {
-    name: '繁花',
-    lang: 'zh-Hans',
-  },
-  {
     name: '后宫·甄嬛传',
     lang: 'zh-Hans',
-  },
-  {
-    name: 'Shōgun',
   },
   {
     name: 'House of Cards',
@@ -233,10 +239,6 @@ export const game: MediaRecord[] = [
     creator: 'Valve',
   },
   {
-    name: 'World of Warships',
-    creator: 'Wargaming',
-  },
-  {
     name: 'Darkest Dungeon',
     creator: 'Red Hook Studios',
   },
@@ -248,10 +250,6 @@ export const game: MediaRecord[] = [
   {
     name: 'The Binding of Isaac: Rebirth',
     creator: 'Nicalis',
-  },
-  {
-    name: 'Dota Underlords',
-    creator: 'Valve',
   },
   {
     name: 'Shadow Tactics: Blades of the Shogun',
