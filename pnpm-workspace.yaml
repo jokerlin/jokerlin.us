@@ -65,10 +65,9 @@ catalogs:
     '@types/nprogress': ^0.2.3
     '@types/prompts': ^2.4.9
 
-onlyBuiltDependencies:
-  - canvas
-  - esbuild
-  - exifreader
-  - sharp
-  - simple-git-hooks
-  - unrs-resolver
+allowBuilds:
+  esbuild: true
+  sharp: true
+  simple-git-hooks: true
+
+strictPeerDependencies: false
