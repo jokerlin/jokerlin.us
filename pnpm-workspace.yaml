@@ -2,9 +2,9 @@ packages: []
 
 catalogs:
   build:
-    '@shikijs/markdown-it': ^3.12.2
-    '@shikijs/transformers': ^3.12.2
-    '@shikijs/twoslash': ^3.12.2
+    '@shikijs/markdown-it': ^4.5.0
+    '@shikijs/transformers': ^4.5.0
+    '@shikijs/twoslash': ^4.5.0
     '@unocss/preset-web-fonts': ^66.12.0
     '@vitejs/plugin-vue': ^6.0.10
     gray-matter: ^4.0.3
@@ -40,7 +40,7 @@ catalogs:
     simple-git: ^3.28.0
     simple-git-hooks: ^2.14.0
     tsx: ^4.23.15
-    typescript: ~5.9.2
+    typescript: ~6.0.3
   frontend:
     '@unhead/vue': ^2.0.14
     '@unocss/reset': ^66.12.0
@@ -50,7 +50,7 @@ catalogs:
     nprogress: ^0.2.0
     pinia: ^3.0.3
     pixi.js: ^8.22.0
-    shiki: ^3.12.2
+    shiki: ^4.5.0
     simplex-noise: ^4.0.3
     vue: ^3.5.44
     vue-router: ^4.5.1
@@ -60,7 +60,7 @@ catalogs:
     '@types/fs-extra': ^11.0.4
     '@types/markdown-it': ^14.2.0
     '@types/markdown-it-link-attributes': ^3.0.5
-    '@types/node': ^24.3.1
+    '@types/node': ^26.6.6
     '@types/nprogress': ^0.2.3
     '@types/prompts': ^2.4.9
 
