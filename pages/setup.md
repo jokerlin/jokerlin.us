@@ -15,9 +15,9 @@ art: dots
 - Keyboard: [ROG Falcata](https://rog.asus.com/keyboards/keyboards/aura-rgb/rog-falcata/) (75% split, magnetic switches) + MelGeek MADE68 Ultra
 - Mouse: [ROG Harpe II Ace](https://rog.asus.com/mice-mouse-pads/mice/wireless/rog-harpe-ii-ace/) + Logitech GPW II
 - Monitor: Sony INZONE M9 II
-- Chair: [LiberNovo](https://libernovo.com/) + Herman Miller Sayl
+- Chair: [LiberNovo Omni](https://libernovo.com/) + Herman Miller Sayl
 - Table: IKEA MITTZON
-- Audio: AirPods 3 / Marshall Stanmore III
+- Audio: AirPods 5 / Marshall Stanmore III
 - NAS: [ZSpace Z4S](https://www.zspace.cn/)
 
 ### Gaming
