@@ -17,7 +17,8 @@ art: dots
 - Monitor: Sony INZONE M9 II
 - Chair: [LiberNovo Omni](https://libernovo.com/) + Herman Miller Sayl
 - Table: IKEA MITTZON
-- Audio: AirPods 5 / Marshall Stanmore III
+- Headphones: AirPods 5 + Marshall Major V + Soundcore Sleep A20 + Sony INZONE H9 + Bose QuietComfort Ultra Headphones
+- Speaker: Marshall Stanmore III
 - NAS: [ZSpace Z4S](https://www.zspace.cn/)
 
 ### Gaming
