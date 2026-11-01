@@ -10,7 +10,7 @@ I’m a builder at heart. I believe the world is made by those who ship, and I l
 
 I write [blog posts](/posts) about AI and productivity tools, reading and writing, photography, Texas Hold'em and tennis.
 
-Outside of programming, I enjoy doing photography and traveling. I post [photos on this page](https://photos.jokerlin.us/). I also love anime, movies, dramas, games and music; my favorites are in the [library](/library). In case you are interested, here is the [gear and tools I use](/setup).
+Outside of programming, I enjoy photography, traveling, tennis and Texas Hold'em. I post [photos on this page](https://photos.jokerlin.us/). I also love anime, movies, dramas, games and music; my favorites are in the [library](/library). In case you are interested, here is the [gear and tools I use](/setup).
 
 I live in <ruby lang="ja">北京<rp>(</rp><rt>Beijing</rt><rp>)</rp></ruby>, if you are around, please reach out and let's have some coffee or work together.
 
