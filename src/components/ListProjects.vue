@@ -9,7 +9,7 @@ function slug(name: string) {
 <template>
     <div class="max-w-300 mx-auto">
         <p text-center mt--6 mb5 op50 text-lg italic>
-            Projects that I created or maintaining.
+            Projects that I created or maintain.
         </p>
         <div class="prose pb5 mx-auto mt10 text-center">
             <div flex="~ gap-2 justify-center">
