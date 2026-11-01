@@ -183,11 +183,11 @@ catalogs:
       specifier: ^4.0.3
       version: 4.0.3
     markdown-it:
-      specifier: ^14.1.0
-      version: 14.1.0
+      specifier: ^15.0.3
+      version: 15.0.3
     markdown-it-anchor:
-      specifier: ^9.2.0
-      version: 9.2.0
+      specifier: ^10.0.0
+      version: 10.0.0
     markdown-it-github-alerts:
       specifier: ^1.0.1
       version: 1.0.1
@@ -457,13 +457,13 @@ importers:
         version: 16.1.6
       markdown-it:
         specifier: catalog:build
-        version: 14.1.0
+        version: 15.0.3
       markdown-it-anchor:
         specifier: catalog:build
-        version: 9.2.0(@types/markdown-it@14.2.0)(markdown-it@14.1.0)
+        version: 10.0.0(@types/markdown-it@14.2.0)(markdown-it@15.0.3)
       markdown-it-github-alerts:
         specifier: catalog:build
-        version: 1.0.1(markdown-it@14.1.0)
+        version: 1.0.1(markdown-it@15.0.3)
       markdown-it-link-attributes:
         specifier: catalog:build
         version: 4.0.1
@@ -2280,8 +2280,8 @@ packages:
   magic-string@1.4.5:
     resolution: {integrity: sha512-oLLC2+YvQUfAa+vxoufE/yc1icb87M9iXIRqAoR/2EhE/8cb3SF/+Gi0c2By1B+5Vz2e2vQtUvHiu1+63Znh+w==}
 
-  markdown-it-anchor@9.2.0:
-    resolution: {integrity: sha512-sa2ErMQ6kKOA4l31gLGYliFQrMKkqSO0ZJgGhDHKijPf0pNFM9vghjAh3gn26pS4JDRs7Iwa9S36gxm3vgZTzg==}
+  markdown-it-anchor@10.0.0:
+    resolution: {integrity: sha512-Q8g7Z6OBdH3eXF0lujFqukIxUvgCDZcjzCrJxmD6QiEzU1HWR9fVN+Bf6gxmM+0yrPFs+jUw8gNjLmUQqt6Eew==}
     peerDependencies:
       '@types/markdown-it': '*'
       markdown-it: '*'
@@ -4913,19 +4913,19 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  markdown-it-anchor@9.2.0(@types/markdown-it@14.2.0)(markdown-it@14.1.0):
+  markdown-it-anchor@10.0.0(@types/markdown-it@14.2.0)(markdown-it@15.0.3):
     dependencies:
       '@types/markdown-it': 14.2.0
-      markdown-it: 14.1.0
+      markdown-it: 15.0.3
 
   markdown-it-async@2.2.0:
     dependencies:
       '@types/markdown-it': 14.2.0
       markdown-it: 14.1.0
 
-  markdown-it-github-alerts@1.0.1(markdown-it@14.1.0):
+  markdown-it-github-alerts@1.0.1(markdown-it@15.0.3):
     dependencies:
-      markdown-it: 14.1.0
+      markdown-it: 15.0.3
 
   markdown-it-link-attributes@4.0.1: {}
 
