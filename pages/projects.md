@@ -14,6 +14,10 @@ projects:
       link: https://github.com/jokerlin/claude-guard
       desc: Check the egress IP before Claude Code starts and before each prompt, and stop on an IP that is not on your allowlist. zsh plugin and Claude Code plugin.
       icon: i-ri-shield-check-line
+    - name: peerlink
+      link: https://github.com/jokerlin/peerlink
+      desc: Let a remote AI agent run tasks you have cataloged on your Mac over Tailscale, with owner approval on Telegram and results returned as letters.
+      icon: i-ri-remote-control-line
 ---
 
 <!-- @layout-full-width -->
