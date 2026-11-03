@@ -16,7 +16,7 @@ projects:
       icon: i-ri-shield-check-line
     - name: peerlink
       link: https://github.com/jokerlin/peerlink
-      desc: Let a remote AI agent run tasks you have cataloged on your Mac over Tailscale, with owner approval on Telegram and results returned as letters.
+      desc: Built for Grok Bot. Let it run tasks you have cataloged on your Mac over Tailscale, with approval codes on Telegram and a doorbell that wakes it when results are ready.
       icon: i-ri-remote-control-line
 ---
 
