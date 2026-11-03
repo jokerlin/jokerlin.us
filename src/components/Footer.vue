@@ -9,13 +9,7 @@
                 style="color: inherit"
                 >CC BY-NC-SA 4.0</a
             >
-            2023-PRESENT © jokerlin | Inspired by
-            <a
-                target="_blank"
-                href="https://github.com/antfu"
-                style="color: inherit"
-                >Anthony Fu</a
-            ></span
+            2023-PRESENT © jokerlin</span
         >
         <div class="flex-auto" />
     </div>
