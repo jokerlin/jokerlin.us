@@ -66,6 +66,20 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/questions-optimizers-dont-ask': RouteRecordInfo<
+      '/posts/questions-optimizers-dont-ask',
+      '/posts/questions-optimizers-dont-ask',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/system-over-willpower': RouteRecordInfo<
+      '/posts/system-over-willpower',
+      '/posts/system-over-willpower',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/thoughts-on-llm': RouteRecordInfo<
       '/posts/thoughts-on-llm',
       '/posts/thoughts-on-llm',
@@ -142,6 +156,22 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/index.md': {
       routes:
         | '/posts/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/questions-optimizers-dont-ask.md': {
+      routes:
+        | '/posts/questions-optimizers-dont-ask'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/system-over-willpower.md': {
+      routes:
+        | '/posts/system-over-willpower'
       views:
         | never
       pathParamNames:
