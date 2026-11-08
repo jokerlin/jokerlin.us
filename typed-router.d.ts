@@ -66,6 +66,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/posts/claude-code-account-survival': RouteRecordInfo<
+      '/posts/claude-code-account-survival',
+      '/posts/claude-code-account-survival',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/posts/questions-optimizers-dont-ask': RouteRecordInfo<
       '/posts/questions-optimizers-dont-ask',
       '/posts/questions-optimizers-dont-ask',
@@ -156,6 +163,14 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/index.md': {
       routes:
         | '/posts/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/claude-code-account-survival.md': {
+      routes:
+        | '/posts/claude-code-account-survival'
       views:
         | never
       pathParamNames:
